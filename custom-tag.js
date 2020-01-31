@@ -1,8 +1,8 @@
 class CustomTag extends HTMLElement{
     constructor(){
         super();
-        this.innerHTML = `<h2>${this.getAttribute('name')}</h2>`;
+        this.attachShadow({mode:'open'});
+        this.shadowRoot.innerHTML = `<style>h2{color:blue}</style><h2>${this.getAttribute('name')}</h2>`;
     }
 }
-
 window.customElements.define('custom-tag',CustomTag);
