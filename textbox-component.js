@@ -1,5 +1,13 @@
 const textboxTemp = document.createElement('template');
-textboxTemp.innerHTML = `<input></input>`
+textboxTemp.innerHTML = `
+<style>
+    input{
+        margin:10px;
+        padding:10px;
+        font:30px;
+    }
+</style>
+<input></input>`
 class TextBox extends HTMLElement{
     constructor(){
         super();
