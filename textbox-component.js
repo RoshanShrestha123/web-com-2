@@ -5,7 +5,7 @@ class TextBox extends HTMLElement{
         super();
         this.attachShadow({mode:'open'});
         this.shadowRoot.appendChild(textboxTemp.content.cloneNode(true));
-        
+        this.shadowRoot.querySelector('input').placeholder = this.getAttribute('placeholder');
     }
 }
 window.customElements.define('textbox-component',TextBox);
